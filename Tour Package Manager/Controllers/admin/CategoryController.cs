@@ -23,6 +23,7 @@ namespace Tour_Package_Manager.Controllers
 
         public JsonResult CategoryInsertUpdate(int CategoryAutoId, string CategoryName, int StatusAutoId, string CategoryImage)
         {
+            var number = 5;
             ResponseData ResponseDataObj = new ResponseData();
             if (Session["ValidateUserID"] != null)
             {

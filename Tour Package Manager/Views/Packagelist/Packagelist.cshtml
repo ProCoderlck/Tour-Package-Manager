@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "Packagelist";
+    Layout = "~/Views/Shared/Masterpage.cshtml";
+}
+
+<script src="~/Scripts/Web_Package.js"></script>
+
+
+<div class="container pt-4 pb-3 ">
+    <div class="text-center mb-4 pb-3">
+        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Packages</h6>
+        <h1>Pefect Tour Packages</h1>
+    </div>
+    
+</div>
+<div class="container-fluid booking mt-2 pb-3">
+    <div class="container pb-3">
+        <div class="bg-light shadow" style="padding: 15px;">
+            <div class="row align-items-center" style="min-height: 60px;">
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mb-3 mb-md-0">
+                                <select class="custom-select px-4" style="height: 47px;" id="DurationName">
+                                    <option selected>Duration</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="mb-3 mb-md-0">
+                                <select class="custom-select px-4" style="height: 47px;" id="CategoryName">
+                                    <option value="0">Category</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="mb-3 mb-md-0">
+                                <select class="custom-select px-4" style="height: 47px;" id="LocationName">
+                                    <option selected>Location</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary btn-block" type="button" id="search" style="height: 47px; margin-top: -2px;">Find Tours</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Packages Start -->
+<div class="container-fluid py-3">
+    <div class="container pt-3 pb-3 ">
+       
+        <div class="row" id="packegae_list_container">
+            @*<div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="~/Content/Website/img/package-1.jpg" alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</small>
+                                <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
+                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="">Discover amazing places of the world with us</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+                                    <h5 class="m-0">$350</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+        </div>
+    </div>
+</div>
+<!-- Packages End -->

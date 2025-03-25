@@ -1,0 +1,239 @@
+﻿
+@{
+    ViewBag.Title = "Contact_List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    <div style="display:flex;align-items:center; justify-content:space-between" class="mb-2">
+        <h4>Contact Management</h4>
+    </div>
+    <div class="card col-lg-12">
+        <div class="card-header">
+            <h>Contact List</h>
+        </div>
+        <div class="card-body card-block">
+            <table class="table table-sm" >
+                <thead>
+                    <tr>
+                        <th scope="col" style="text-align:center">Auto Id</th>
+                        <th scope="col" style="text-align:center">Name</th>
+                        <th scope="col" style="text-align:center">Email </th>
+                        <th scope="col" style="text-align:center">Subject </th>
+                        <th scope="col" style="text-align:center">Status </th>
+                        <th scope="col" style="text-align:center">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="Data">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<style>
+    .custom-modal {
+        max-width: 900px; 
+        width: 50%;
+    }
+</style>
+
+<div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="categoryModalLabel" aria-hidden="true">
+    <div class="modal-dialog custom-modal">
+        <div class="modal-content">
+            <div class="modal-header" style="float:inline-end">
+                <h5 class="modal-title" id="categoryModalLabel" style="display:inline">Contact Details</h5>
+                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close" style="float:inline-end"></button>
+            </div>
+
+            <div class="card-body card-block">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-4">
+                                <label for="Name" class="form-control-label">Name</label>
+                                <input type="text" id="Name" class="form-control" readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-4">
+                                <label for="Email" class="form-control-label">Email</label>
+                                <input type="text" id="Email" class="form-control"readonly>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="mb-4">
+                                <label for="Subject" class="form-control-label">Subject</label>
+                                <textarea id="Subject" class="form-control" rows="2" readonly></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="mb-4">
+                                <label for="Message" class="form-control-label">Message</label>
+                                <textarea id="Message" class="form-control" rows="3" readonly></textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-12 text-center">
+                            <button type="button" class="btn btn-info btn-sm  UpdateMsg"id="btn-read" onclick="UpdateStatus(this,1)">Mark As Read</button>
+                            <button type="button" class="btn btn-warning btn-sm  UpdateMsg" id="btn-unread" onclick="UpdateStatus(this,0)">Mark As Unread</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function () {
+        ShowContact();
+        const searchParams = new URLSearchParams(window.location.search);
+        debugger;
+        if (searchParams.has('Contact_Id')) {
+            showcontactdetails(searchParams.get('Contact_Id'));
+        }
+
+        debugger;
+        $("#categoryModal").modal({
+            backdrop: "static",
+            keyboard: false
+
+        });
+    });
+    function ShowContact() {
+        try {
+            debugger;
+            $.post("/Contact/ShowContact", {}, function (data) {
+                debugger;
+                if (data) {
+                    debugger;
+                    $("#Data").empty();
+                    $.each(data, function (i, item) {
+                        var style = 'font-weight: bold; background: #f1f0f0;';
+                        if (item.status == '1') {
+                            style = '';
+                        }
+                        $("#Data").append(`<tr>
+                    <td style="text-align:center; ${style}">${item.ContactAutoId}</td>
+                    <td style="${style}">${item.Name}</td>
+                    <td  style="${style}">${item.Email}</td>
+                    <td  style="${style}">${item.Subject}</td>
+                   <td style="text-align:center;${style}">
+                    <a onclick="showcontactdetails(${item.ContactAutoId});" data-bs-toggle="modal" data-bs-target="#categoryModal" class="fa fa-eye" style="font-size:24px;font-weight: normal;"></a>
+                   </td>
+
+                    <td style="text-align:center;${style}">
+                                <a onclick="Contactdelete(${item.ContactAutoId});"class="fa fa-trash-o" style='font-size: 20px;color:red;margin-right:10px;font-weight: normal'></a>
+                    </td>
+                    </tr>`
+                        );
+                    });
+                }
+            });
+
+        }
+        catch (e) {
+            (alert("error" + e.Message))
+        }
+    }
+
+    function showcontactdetails(Contact_Id) {
+        try {
+            $.post("/Contact/ShowDetailsContact", { ContactAutoId: Contact_Id }, function (response) {
+                debugger;
+                if (response.responseCode == 200) {
+                    $("#Name").val(response.data.Name);
+                    $("#Email").val(response.data.Email);
+                    $("#Subject").val(response.data.Subject);
+                    $("#Message").val(response.data.Message);
+                    $(".UpdateMsg").val(Contact_Id);
+
+                    if (response.data.status == "1") { // Message is Read
+                        $("#btn-read").hide();
+                        $("#btn-unread").show();
+                } else { // Message is Unread
+
+                        $("#btn-unread").hide();
+                        $("#btn-read").show();
+                       
+                }
+
+                }
+                else {
+                    window.location.href = "/";
+                }
+            });
+        }
+        catch (e) {
+            alert("Error in MissingToolId" + e.message);
+        }
+    }
+
+    function UpdateStatus(e, ContactStatusAutoId) {
+
+        try {
+            $.post("/Contact/EditcontactstatusData", { ContactAutoId: $(e).val(), ContactStatusAutoId: ContactStatusAutoId }, function (response) {
+                debugger;
+                window.location.href = "/Contact/Contact_List";
+            });
+        }
+        catch (e) {
+            alert("Error in MissingToolId" + e.message);
+        }
+    }
+
+    function Contactdelete(ContactAutoId) {
+        try {
+            Swal.fire({
+                text: 'Are you sure to delete this Coontact?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'Cancel'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.post("/Contact/Contactdelete", { ContactAutoId: ContactAutoId }, function (response) {
+                        if (response.responseCode == 200) {
+                            Swal.fire({
+                                icon: 'success',
+                                text: response.responseMessage,
+                            });
+                            ShowContact();
+                        }
+
+                        else {
+                            window.location.href = "/";
+                        }
+                    }).fail(function () {
+                        Swal.fire({
+                            title: 'Error!',
+                            text: 'Failed to delete the item.',
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        });
+                    });
+                }
+            });
+        } catch (e) {
+            Swal.fire({
+                title: 'Error!',
+                text: 'Error in DeleteToolData: ' + e.message,
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+        }
+    }
+
+</script>
+
+
+

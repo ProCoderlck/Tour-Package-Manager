@@ -1,0 +1,195 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ela Admin - HTML5 Admin Template</title>
+    <meta name="description" content="Ela Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
+    <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">
+    <script src="~/Content/assets/js/main.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="~/Content/assets/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="~/Content/assets/css/style.css">
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/Scripts/Master.js?v=4.9.14"></script>
+
+    <script src="~/Scripts/jquery-3.7.1.min.js"></script>
+    <style>
+        .requrid {
+            color: red
+        }
+    </style>
+
+</head>
+
+<body>
+
+    @if (Session["ValidateUserID"] == null)
+    {
+        <script type="text/javascript">
+     window.location.href = '@Url.Action("Login", "Login")';
+        </script>
+    }
+    <!-- Left Panel -->
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+
+
+                    <li class="active">
+                        <a href="~/Home/Index"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="~/User/User_List" aria-haspopup="true" aria-expanded="false">
+                            <i class="menu-icon fa fa-table"></i>User Management
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="~/Duration/Duration_List" aria-haspopup="true" aria-expanded="false">
+                            <i class="menu-icon ti-alarm-clock"></i>Duration Management
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="~/Category/Category_List" aria-haspopup="true" aria-expanded="false">
+                            <i class="menu-icon ti-layout-grid2"></i>Category Management
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="~/Location/Location_List" aria-haspopup="true" aria-expanded="false">
+                            <i class="menu-icon ti-location-arrow"></i>Location Management
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="~/Package/Package_List" aria-haspopup="true" aria-expanded="false">
+                            <i class="menu-icon ti-package"></i>Package Management
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a href="~/Blog/Blog_List" aria-haspopup="true" aria-expanded="false">
+                            <i class="menu-icon ti-new-window"></i>Blog Management
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a href="~/Testimonial/Testimonial_List" aria-haspopup="true" aria-expanded="false">
+                            <i class="menu-icon ti-bookmark"></i>Testimonial Mgmt
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a href="~/Guides/Guides_List" aria-haspopup="true" aria-expanded="false">
+                            <i class="menu-icon ti-align-justify"></i>Guide Management
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a href="~/Contact/Contact_List" aria-haspopup="true" aria-expanded="false">
+                            <i class="menu-icon ti-agenda"></i>Contact Management
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a href="~/Settings/Add_Settings" aria-haspopup="true" aria-expanded="false">
+                            <i class="menu-icon ti-widget"></i>Setting Management
+                        </a>
+
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </nav>
+    </aside>
+    <!-- /#left-panel -->
+    <!-- Right Panel -->
+    <div id="right-panel" class="right-panel">
+        <!-- Header-->
+        <header id="header" class="header">
+            <div class="top-left">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="./"><img src="~/Content/images/logo.png" alt="Logo"></a>
+
+                    @*<a class="navbar-brand hidden" href="./"><img src="~/Content/images/logo2.png" alt="Logo"></a>*@
+                    <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+                </div>
+               
+            </div>
+            <div class="top-right">
+                <div class="header-menu">
+                    <div class="header-left">
+
+
+                    </div>
+
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="~/Content/images/admin.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+
+                            <a class="nav-link" href="~/Login/Logout"><i class="fa fa-power -off"></i>Logout</a>
+                            <a class="nav-link" href="~/Home/ChangePassword"><i class="fa fa-power -off"></i>Change Password</a>
+                        </div>
+                     
+                    </div> 
+
+                </div>
+            </div>
+        </header>
+        <!-- /#header -->
+
+
+        <div class="clearfix"></div>
+        <!-- Footer -->
+
+        <div class="body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>
+
+
+    </div>
+    <!-- /#right-panel -->
+    <!-- Scripts -->
+    <!--  Chart js -->
+    <!--Local Stuff-->
+   
+</body>
+</html>

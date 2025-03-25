@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Package_List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/PackageList.js?v=2.4.2"></script>
+<div class="content">
+    <div style="display:flex;align-items:center; justify-content:space-between" class="mb-2">
+        <h4>Package Management</h4>
+        <a href="~/Package/Add_Package" class="btn btn-info btn-sm card-title" style="float:right">Add Package</a>
+    </div>
+    <div class="card col-lg-12">
+        <div class="card-header">
+            <h>Package List</h>
+        </div>
+        <div class="card-body card-block">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col" style="text-align:center">Action</th>
+                        <th scope="col" style="text-align:center">Auto Id</th>
+                        <th scope="col" style="text-align:center">Duration</th>
+                        <th scope="col" style="text-align:center">Catagory</th>
+                        <th scope="col" style="text-align:center">Location</th>
+                        <th scope="col" style="text-align:center">Package</th>
+                        <th scope="col" style="text-align:center">Price</th>
+                        <th scope="col" style="text-align:center">Image</th>
+                        <th scope="col" style="text-align:center">Status </th>
+
+                    </tr>
+                </thead>
+                <tbody id="Data">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

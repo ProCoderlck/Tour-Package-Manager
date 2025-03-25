@@ -1,0 +1,124 @@
+﻿
+@{
+    ViewBag.Title = "Add_Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    #photoBox {
+        border: 2px solid #ccc;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .requrid {
+        color: red
+    }
+</style>
+<script src="~/Scripts/BlogMaster.js"></script>
+
+<div class="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div style="display:flex;align-items:center; justify-content:space-between" class="mb-2">
+                <h4>Blog Management</h4>
+                <a href="~/Blog/Blog_List" class="btn btn-info btn-sm card-title" style="float:right">Blog List</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h>Add Blog</h>
+                </div>
+                <div class="card-body card-block">
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <!---->
+                                        <div class="row mb-4">
+                                            <label for="PackageName" class="pr-1  form-control-label col-sm-4">Blog Title <span class="requrid">*</span></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="BlogTitle" placeholder="Input Your Title" class="form-control" onchange="clearRequiredMsg(this)">
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-4">
+                                            <label for="Duration" class="pr-1  form-control-label col-sm-4">User Name <span class="requrid">*</span></label>
+                                            <div class="col-sm-8">
+                                                <select id="UserName" class="form-control" aria-label="Default select example" onchange="clearRequiredMsg(this)">
+                                                    <option selected>--Select UserName--</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                       
+                                       
+                                        
+                                        <div class="row mb-4">
+                                            <label for="StatusAutoId" class="pr-1  form-control-label col-sm-4">Photo</label>
+                                            <div class="col-sm-8">
+                                                <input type="file" id="Photo" class="form-control">
+                                                <div id="photoBox" style="margin-top:5px">
+                                                    <div class="bi bi-image">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!---->
+                                    </div>
+                                    <div class="col-6">
+
+                                        <div class="row mb-4">
+                                            <label for="PackageStart" class="pr-1  form-control-label col-sm-4">Date <span class="requrid">*</span></label>
+                                            <div class="col-sm-8">
+                                                <input type="date" id="Date" class="form-control" onchange="clearRequiredMsg(this)">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <label for="Category" class="pr-1  form-control-label col-sm-4">Blog Name <span class="requrid">*</span></label>
+                                            <div class="col-sm-8">
+                                                <select id="BlogName" class="form-control" aria-label="Default select example" onchange="clearRequiredMsg(this)">
+                                                    <option selected>--Select BlogName--</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-4">
+                                            <label for="Discription" class="pr-1  form-control-label col-sm-4">Discription <span class="requrid">*</span></label>
+                                            <div class="col-sm-8">
+                                                <textarea class="form-control" id="Discription" rows="2" cols="100" maxlength="200" onchange="clearRequiredMsg(this)"></textarea>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="form-actions form-group">
+                                            <button class="btn btn-primary btn-sm" id="Save">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

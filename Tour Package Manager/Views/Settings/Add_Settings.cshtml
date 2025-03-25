@@ -1,0 +1,102 @@
+﻿
+@{
+    ViewBag.Title = "Add_Settings";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/SettingsMaster.js"></script>
+<div class="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div style="display:flex;align-items:center; justify-content:space-between" class="mb-2">
+                <h4>Settings Update</h4>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h>Settings Update</h>
+                </div>
+                <div class="card-body card-block">
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <!---->
+                                        <div class="row mb-4">
+                                            <label for="PhoneNumber" class="pr-1  form-control-label col-sm-4">Phone Number <span class="requrid">*</span></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="PhoneNumber" placeholder="Input Phone Number" class="form-control" onchange="clearRequiredMsg(this)">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <label for="Email" class="pr-1  form-control-label col-sm-4">Email <span class="requrid">*</span></label>
+                                            <div class="col-sm-8">
+                                                <input type="email" id="Email" placeholder=" Input Your Email" class="form-control" onchange="clearRequiredMsg(this)">
+                                            </div>
+                                        </div> 
+                                        <div class="row mb-4">
+                                            <label for="Email" class="pr-1  form-control-label col-sm-4">Location <span class="requrid">*</span></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="Location" placeholder=" Input Your Location" class="form-control" onchange="clearRequiredMsg(this)">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <label for="Insatgram" class="pr-1  form-control-label col-sm-4">Insatgram <span class="requrid">*</span></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="Insatgram" placeholder=" Input Your Insatgram" class="form-control" onchange="clearRequiredMsg(this)">
+                                            </div>
+                                        </div>
+                                        <!---->
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="row mb-4">
+                                            <label for="Facebook" class="pr-1  form-control-label col-sm-4">Facebook <span class="requrid">*</span></label>
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input type="text" id="Facebook" placeholder="Input Your Facebook " class="form-control" onchange="clearRequiredMsg(this)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <label for="Twitter" class="pr-1  form-control-label col-sm-4">Twitter <span class="requrid">*</span></label>
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input type="text" id="Twitter" placeholder="Input Your Twitter " class="form-control" onchange="clearRequiredMsg(this)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <label for="Youtube" class="pr-1  form-control-label col-sm-4">Youtube <span class="requrid">*</span></label>
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input type="text" id="Youtube" placeholder="Input Your Youtube " class="form-control" onchange="clearRequiredMsg(this)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <label for="Youtube" class="pr-1  form-control-label col-sm-4">Linkddin <span class="requrid">*</span></label>
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input type="text" id="Linkddin" placeholder="Input Your Linkddin " class="form-control" onchange="clearRequiredMsg(this)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="form-actions form-group">
+                                            <button class="btn btn-primary btn-sm" id="Update">Update</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

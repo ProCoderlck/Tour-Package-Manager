@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/Masterpage.cshtml";
+}
+<script src="~/Scripts/Contact_Web.js"></script>
+<!-- Contact Start -->
+
+<div class="container pt-4 pb-3 ">
+    <div class="text-center mb-3 pb-3">
+        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Contact</h6>
+        <h1>Contact For Any Query</h1>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="contact-form bg-white" style="padding: 15px;">
+            <div id="success"></div>
+            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                <div class="form-row">
+                    <div class="control-group col-sm-6">
+                        <input type="text" class="form-control p-4" id="Name" placeholder="Your Name" onchange="clearRequiredMsg(this)"
+                               data-validation-required-message="Please enter your name" />
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="control-group col-sm-6">
+                        <input type="email" class="form-control p-4" id="Email" placeholder="Your Email" onchange="clearRequiredMsg(this)"
+                               data-validation-required-message="Please enter your email" />
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <input type="text" class="form-control p-4" id="Subject" placeholder="Subject" onchange="clearRequiredMsg(this)"
+                           data-validation-required-message="Please enter a subject" />
+                    <p class="help-block text-danger"></p>
+                </div>
+                <div class="control-group">
+                    <textarea class="form-control py-3 px-4" rows="5" id="ContactMessage" placeholder="Message"
+                              data-validation-required-message="Please enter your message"></textarea>
+                    <p class="help-block text-danger"></p>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary py-3 px-4" type="submit" id="sentmessage">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    
+<!-- Contact End -->

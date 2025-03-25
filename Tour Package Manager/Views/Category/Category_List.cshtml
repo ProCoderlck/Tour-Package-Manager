@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Category_List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/CategoryList.js?v=4.5.2"></script>
+
+<div class="content">
+    <div style="display:flex;align-items:center; justify-content:space-between" class="mb-2">
+        <h4>Category Management</h4>
+        <a href="~/Category/Add_Category" class="btn btn-info btn-sm card-title" style="float:right">Add Category</a>
+    </div>
+    <div class="card col-lg-12">
+        <div class="card-header">
+            <h>Category List</h>
+        </div>
+        <div class="card-body card-block">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col" style="text-align:center">Auto Id</th>
+                        <th scope="col" style="text-align:center">Category Name</th>
+                        <th scope="col" style="text-align:center">Status </th>
+                        <th scope="col" style="text-align:center">Image </th>
+
+                        <th scope="col" style="text-align:center">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="Data">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

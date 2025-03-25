@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Add_Duration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/DurationMaster.js?v=5.3.4"></script>
+
+<div class="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div style="display:flex;align-items:center; justify-content:space-between" class="mb-2">
+                <h4>Duration Management</h4>
+                <a href="~/Duration/Duration_List" class="btn btn-info btn-sm card-title" style="float:right">Duration List</a>
+            </div>
+        </div>
+    </div> <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h>Add User</h>
+                </div>
+                <div class="card-body card-block">
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <!---->
+                                        <div class="row mb-4">
+                                            <label for="DurationName" class="pr-1  form-control-label col-sm-4">Duration Name  <span class="requrid">*</span></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="DurationName" placeholder="Enter Duration Name" class="form-control" onchange="clearRequiredMsg(this)">
+                                            </div>
+                                        </div>
+
+                                        <!---->
+                                    </div>
+                                    <div class="col-6">
+
+                                        <div class="row mb-4">
+                                            <label for="StatusAutoId" class="pr-1  form-control-label col-sm-4">Status <span class="requrid">*</span></label>
+                                            <div class="col-sm-8">
+                                                <select id="Status" class="form-control" aria-label="Default select example" onchange="clearRequiredMsg(this)">
+                                                    <option value="">--Select Status--</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>   <div class="col-sm-8">
+                                        <div class="form-actions form-group">
+                                            <button class="btn btn-primary btn-sm" id="Save">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

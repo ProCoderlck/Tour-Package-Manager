@@ -1,0 +1,113 @@
+﻿
+@{
+    ViewBag.Title = "Add_User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<script src="~/Scripts/UserMaster.js?v=4.5.12"></script>
+<style>
+    #photoBox {
+        border: 2px solid #ccc;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .requrid {
+        color: red
+    }
+</style>
+<div class="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <div style="display:flex;align-items:center; justify-content:space-between" class="mb-2">
+                <h4>User Management</h4>
+                <a href="~/User/User_List" class="btn btn-info btn-sm card-title" style="float:right">User List</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h>Add User</h>
+                </div>
+                <div class="card-body card-block">
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <!---->
+                                        <div class="row mb-4">
+                                            <label for="UserName" class="pr-1  form-control-label col-sm-4">User Name <span class="requrid">*</span></label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="UserName" placeholder="Input Your Name" class="form-control" onchange="clearRequiredMsg(this)">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <label for="MobileNo" class="pr-1  form-control-label col-sm-4">MobileNo <span class="requrid">*</span></label>
+                                            <div class="col-sm-8">
+                                                <input type="number" id="MobileNo" placeholder="Enter Your Number" class="form-control" onchange="clearRequiredMsg(this)">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <label for="Email" class="pr-1  form-control-label col-sm-4">Email <span class="requrid">*</span></label>
+                                            <div class="col-sm-8">
+                                                <input type="email" id="Email" placeholder=" Input Your Email" class="form-control" onchange="clearRequiredMsg(this)">
+                                            </div>
+                                        </div>
+                                        <!---->
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="row mb-4">
+                                            <label for="Password" class="pr-1  form-control-label col-sm-4">Password <span class="requrid">*</span></label>
+                                            <div class="col-sm-8">
+                                                <div class="input-group">
+                                                    <input type="password" id="Password" placeholder="Input Your Paasword " class="form-control" onchange="clearRequiredMsg(this)">
+                                                    <span class="input-group-text roun rounded-end" id="togglePassword" onclick="togglePasswordVisibility()"><i class="fa fa-eye"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <label for="StatusAutoId" class="pr-1  form-control-label col-sm-4">Status <span class="requrid">*</span></label>
+                                            <div class="col-sm-8">
+                                                <select id="Status" class="form-control" aria-label="Default select example" onchange="clearRequiredMsg(this)">
+                                                    <option value="">--Select Status--</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <label for="StatusAutoId" class="pr-1  form-control-label col-sm-4">Image</label>
+                                            <div class="col-sm-8">
+                                                <input type="file" id="UserImage" class="form-control">
+                                                <div id="photoBox" style="margin-top:5px">
+                                                    <div class="bi bi-image">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="form-actions form-group">
+                                            <button class="btn btn-primary btn-sm" id="Save">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

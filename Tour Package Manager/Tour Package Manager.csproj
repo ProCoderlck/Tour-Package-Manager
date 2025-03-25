@@ -1,0 +1,482 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FECDEC5B-8BB6-43EE-9581-DD03A38126DF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tour_Package_Manager</RootNamespace>
+    <AssemblyName>Tour Package Manager</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\assets\css\cs-skin-elastic.css" />
+    <Content Include="Content\assets\css\lib\chosen\chosen-sprite%402x.png" />
+    <Content Include="Content\assets\css\lib\chosen\chosen-sprite.png" />
+    <Content Include="Content\assets\css\lib\chosen\chosen.css" />
+    <Content Include="Content\assets\css\lib\chosen\chosen.min.css" />
+    <Content Include="Content\assets\css\lib\datatable\buttons.bootstrap.min.css" />
+    <Content Include="Content\assets\css\lib\datatable\buttons.dataTables.min.css" />
+    <Content Include="Content\assets\css\lib\datatable\dataTables.bootstrap.min.css" />
+    <Content Include="Content\assets\css\lib\vector-map\jqvmap.min.css" />
+    <Content Include="Content\assets\css\style.css" />
+    <Content Include="Content\assets\fonts\icomoon\icomoon.svg" />
+    <Content Include="Content\assets\fonts\icomoon\index.html" />
+    <Content Include="Content\assets\js\dashboard.js" />
+    <Content Include="Content\assets\js\init\chartjs-init.js" />
+    <Content Include="Content\assets\js\init\datatables-init.js" />
+    <Content Include="Content\assets\js\init\flot-chart-init.js" />
+    <Content Include="Content\assets\js\init\fullcalendar-init.js" />
+    <Content Include="Content\assets\js\init\gmap-init.js" />
+    <Content Include="Content\assets\js\init\peitychart-init.js" />
+    <Content Include="Content\assets\js\init\vector-init.js" />
+    <Content Include="Content\assets\js\init\weather-init.js" />
+    <Content Include="Content\assets\js\lib\chosen\chosen.jquery.js" />
+    <Content Include="Content\assets\js\lib\chosen\chosen.jquery.min.js" />
+    <Content Include="Content\assets\js\lib\chosen\chosen.proto.js" />
+    <Content Include="Content\assets\js\lib\chosen\chosen.proto.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\buttons.bootstrap.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\buttons.colVis.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\buttons.flash.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\buttons.html5.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\buttons.print.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\dataTables.bootstrap.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\dataTables.buttons.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\datatables.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\jquery-1.12.4.js" />
+    <Content Include="Content\assets\js\lib\data-table\jquery.dataTables.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\jszip.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\pdfmake.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\vfs_fonts.js" />
+    <Content Include="Content\assets\js\lib\gmap\gmapApi.js" />
+    <Content Include="Content\assets\js\lib\gmap\gmaps.js" />
+    <Content Include="Content\assets\js\lib\gmap\gmaps.min.js" />
+    <Content Include="Content\assets\js\main.js" />
+    <Content Include="Content\assets\js\vmap.sampledata.js" />
+    <Content Include="Content\assets\js\widgets.js" />
+    <Content Include="Content\assets\scss\style.css" />
+    <Content Include="Content\images\admin.jpg" />
+    <Content Include="Content\images\avatar\1.jpg" />
+    <Content Include="Content\images\avatar\2.jpg" />
+    <Content Include="Content\images\avatar\3.jpg" />
+    <Content Include="Content\images\avatar\4.jpg" />
+    <Content Include="Content\images\avatar\5.jpg" />
+    <Content Include="Content\images\avatar\6.jpg" />
+    <Content Include="Content\images\avatar\64-1.jpg" />
+    <Content Include="Content\images\avatar\64-2.jpg" />
+    <Content Include="Content\images\favicon.png" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\logo2.png" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\Website\css\style.css" />
+    <Content Include="Content\Website\css\style.min.css" />
+    <Content Include="Content\Website\img\about-1.jpg" />
+    <Content Include="Content\Website\img\about-2.jpg" />
+    <Content Include="Content\Website\img\about.jpg" />
+    <Content Include="Content\Website\img\blog-1.jpg" />
+    <Content Include="Content\Website\img\blog-100x100.jpg" />
+    <Content Include="Content\Website\img\blog-2.jpg" />
+    <Content Include="Content\Website\img\blog-3.jpg" />
+    <Content Include="Content\Website\img\carousel-1.jpg" />
+    <Content Include="Content\Website\img\carousel-2.jpg" />
+    <Content Include="Content\Website\img\destination-1.jpg" />
+    <Content Include="Content\Website\img\destination-2.jpg" />
+    <Content Include="Content\Website\img\destination-3.jpg" />
+    <Content Include="Content\Website\img\destination-4.jpg" />
+    <Content Include="Content\Website\img\destination-5.jpg" />
+    <Content Include="Content\Website\img\destination-6.jpg" />
+    <Content Include="Content\Website\img\package-1.jpg" />
+    <Content Include="Content\Website\img\package-2.jpg" />
+    <Content Include="Content\Website\img\package-3.jpg" />
+    <Content Include="Content\Website\img\package-4.jpg" />
+    <Content Include="Content\Website\img\package-5.jpg" />
+    <Content Include="Content\Website\img\package-6.jpg" />
+    <Content Include="Content\Website\img\team-1.jpg" />
+    <Content Include="Content\Website\img\team-2.jpg" />
+    <Content Include="Content\Website\img\team-3.jpg" />
+    <Content Include="Content\Website\img\team-4.jpg" />
+    <Content Include="Content\Website\img\testimonial-1.jpg" />
+    <Content Include="Content\Website\img\testimonial-2.jpg" />
+    <Content Include="Content\Website\img\testimonial-3.jpg" />
+    <Content Include="Content\Website\img\testimonial-4.jpg" />
+    <Content Include="Content\Website\img\user.jpg" />
+    <Content Include="Content\Website\js\main.js" />
+    <Content Include="Content\Website\lib\easing\easing.js" />
+    <Content Include="Content\Website\lib\easing\easing.min.js" />
+    <Content Include="Content\Website\lib\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="Content\Website\lib\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="Content\Website\lib\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="Content\Website\lib\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="Content\Website\lib\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="Content\Website\lib\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="Content\Website\lib\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="Content\Website\lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="Content\Website\lib\owlcarousel\owl.carousel.js" />
+    <Content Include="Content\Website\lib\owlcarousel\owl.carousel.min.js" />
+    <Content Include="Content\Website\lib\tempusdominus\css\tempusdominus-bootstrap-4.css" />
+    <Content Include="Content\Website\lib\tempusdominus\css\tempusdominus-bootstrap-4.min.css" />
+    <Content Include="Content\Website\lib\tempusdominus\js\moment-timezone.min.js" />
+    <Content Include="Content\Website\lib\tempusdominus\js\moment.min.js" />
+    <Content Include="Content\Website\lib\tempusdominus\js\tempusdominus-bootstrap-4.js" />
+    <Content Include="Content\Website\lib\tempusdominus\js\tempusdominus-bootstrap-4.min.js" />
+    <Content Include="Content\Website\mail\contact.js" />
+    <Content Include="Content\Website\mail\jqBootstrapValidation.min.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Handler1.ashx" />
+    <Content Include="Content\Website\lib\owlcarousel\LICENSE" />
+    <Content Include="Content\Website\mail\contact.php" />
+    <Content Include="Content\Website\scss\bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\bootstrap.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_background-variant.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_badge.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_deprecate.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_float.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_grid-framework.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_hover.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_image.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_nav-divider.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_screen-reader.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_size.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_table-row.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_text-emphasis.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_text-hide.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\mixins\_visibility.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\utilities\_align.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\utilities\_background.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\utilities\_borders.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\utilities\_clearfix.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\utilities\_display.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\utilities\_embed.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\utilities\_flex.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\utilities\_float.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\utilities\_interactions.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\utilities\_overflow.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\utilities\_position.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\utilities\_screenreaders.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\utilities\_shadows.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\utilities\_sizing.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\utilities\_spacing.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\utilities\_stretched-link.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\utilities\_text.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\utilities\_visibility.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\vendor\_rfs.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_alert.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_badge.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_button-group.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_buttons.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_card.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_carousel.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_close.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_code.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_custom-forms.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_dropdown.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_forms.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_functions.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_grid.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_images.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_input-group.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_jumbotron.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_list-group.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_media.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_mixins.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_modal.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_nav.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_navbar.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_pagination.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_popover.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_print.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_progress.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_reboot.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_root.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_spinners.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_tables.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_toasts.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_tooltip.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_transitions.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_type.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_utilities.scss" />
+    <Content Include="Content\Website\scss\bootstrap\scss\_variables.scss" />
+    <Content Include="Content\Website\scss\style.scss" />
+    <None Include="Models\.editorconfig" />
+    <None Include="Scripts\jquery-3.7.1.intellisense.js" />
+    <Content Include="Scripts\BlogDetail_Web.js" />
+    <Content Include="Scripts\BlogList.js" />
+    <Content Include="Scripts\BlogMaster.js" />
+    <Content Include="Scripts\BlogwebList.js" />
+    <Content Include="Scripts\CategoryList.js" />
+    <Content Include="Scripts\CategoryMaster.js" />
+    <Content Include="Scripts\Contact_Web.js" />
+    <Content Include="Scripts\DurationList.js" />
+    <Content Include="Scripts\DurationMaster.js" />
+    <Content Include="Scripts\Guide_list.js" />
+    <Content Include="Scripts\Guide_Master.js" />
+    <Content Include="Scripts\jquery-3.7.1.js" />
+    <Content Include="Scripts\jquery-3.7.1.min.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
+    <Content Include="Scripts\LocationList.js" />
+    <Content Include="Scripts\LocationMaster.js" />
+    <Content Include="Scripts\Master.js" />
+    <Content Include="Scripts\MasterLayoutForWebsite.js" />
+    <Content Include="Scripts\PackageList.js" />
+    <Content Include="Scripts\PackageMaster.js" />
+    <Content Include="Scripts\Package_details_Web.js" />
+    <Content Include="Scripts\SettingsMaster.js" />
+    <Content Include="Scripts\Testimonial_List.js" />
+    <Content Include="Scripts\Testimonial_Master.js" />
+    <Content Include="Scripts\Testimonial_Web.js" />
+    <Content Include="Scripts\UserList.js" />
+    <Content Include="Scripts\UserMaster.js" />
+    <Content Include="Scripts\Website_Index.js" />
+    <Content Include="Scripts\Web_Package.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\admin\BlogController.cs" />
+    <Compile Include="Controllers\admin\CategoryController.cs" />
+    <Compile Include="Controllers\admin\ContactController.cs" />
+    <Compile Include="Controllers\admin\DurationController.cs" />
+    <Compile Include="Controllers\admin\GuidesController.cs" />
+    <Compile Include="Controllers\admin\HomeController.cs" />
+    <Compile Include="Controllers\admin\LocationController.cs" />
+    <Compile Include="Controllers\admin\LoginController.cs" />
+    <Compile Include="Controllers\admin\PackageController.cs" />
+    <Compile Include="Controllers\admin\SettingsController.cs" />
+    <Compile Include="Controllers\admin\TestimonialController.cs" />
+    <Compile Include="Controllers\admin\UserController.cs" />
+    <Compile Include="Controllers\website\AboutWebtController.cs" />
+    <Compile Include="Controllers\website\BlogWebController.cs" />
+    <Compile Include="Controllers\website\ContactWebController.cs" />
+    <Compile Include="Controllers\website\Guide_WebController.cs" />
+    <Compile Include="Controllers\website\MasterLayoutController.cs" />
+    <Compile Include="Controllers\website\PackagelistController.cs" />
+    <Compile Include="Controllers\website\TestimonialWebController.cs" />
+    <Compile Include="Controllers\website\WebHomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handler1.ashx.cs">
+      <DependentUpon>Handler1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BlogCategoryDD.cs" />
+    <Compile Include="Models\BlogDD.cs" />
+    <Compile Include="Models\CategoryDD.cs" />
+    <Compile Include="Models\Common.cs" />
+    <Compile Include="Models\ContactDD.cs" />
+    <Compile Include="Models\DaysDD.cs" />
+    <Compile Include="Models\DurationDD.cs" />
+    <Compile Include="Models\GuideDD.cs" />
+    <Compile Include="Models\LayoutMasterWebsite.cs" />
+    <Compile Include="Models\LocationDD.cs" />
+    <Compile Include="Models\PackageDD.cs" />
+    <Compile Include="Models\ResponseData.cs" />
+    <Compile Include="Models\StatusForDD.cs" />
+    <Compile Include="Models\TaskDD.cs" />
+    <Compile Include="Models\TestimonialDD.cs" />
+    <Compile Include="Models\UserDD.cs" />
+    <Compile Include="Models\Utility.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="Content\.github\ISSUE_TEMPLATE.md" />
+    <Content Include="Content\assets\css\style.css.map" />
+    <Content Include="Content\assets\fonts\icomoon\icomoon.eot" />
+    <Content Include="Content\assets\fonts\icomoon\icomoon.ttf" />
+    <Content Include="Content\assets\fonts\icomoon\icomoon.woff" />
+    <Content Include="Content\assets\scss\style.css.map" />
+    <Content Include="Content\assets\scss\style.scss" />
+    <Content Include="Content\images\.gitignore" />
+    <Content Include="Content\images\logo.psd" />
+    <None Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.7.1.min.map" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Duration\Add_Duration.cshtml" />
+    <Content Include="Views\User\Add_User.cshtml" />
+    <Content Include="Views\User\User_List.cshtml" />
+    <Content Include="Views\Duration\Duration_List.cshtml" />
+    <Content Include="Views\Location\Add_Location.cshtml" />
+    <Content Include="Views\Location\Location_List.cshtml" />
+    <Content Include="Views\Category\Add_Category.cshtml" />
+    <Content Include="Views\Category\Category_List.cshtml" />
+    <Content Include="Views\Home\ChangePassword.cshtml" />
+    <Content Include="Views\Package\Add_Package.cshtml" />
+    <Content Include="Views\Package\Package_List.cshtml" />
+    <Content Include="Views\Shared\Masterpage.cshtml" />
+    <Content Include="Views\WebHome\Index.cshtml" />
+    <Content Include="Views\Packagelist\Packagelist.cshtml" />
+    <Content Include="Views\Blog\Add_Blog.cshtml" />
+    <Content Include="Views\Blog\Blog_List.cshtml" />
+    <Content Include="Views\BlogWeb\Blogweblist.cshtml" />
+    <Content Include="Views\BlogWeb\BlogDetail.cshtml" />
+    <Content Include="Views\Testimonial\Add_Testimonial.cshtml" />
+    <Content Include="Views\Testimonial\Testimonial_List.cshtml" />
+    <Content Include="Views\Packagelist\Package_details.cshtml" />
+    <Content Include="Views\ContactWeb\Contact.cshtml" />
+    <Content Include="Views\AboutWebt\About.cshtml" />
+    <Content Include="Views\Guides\Add_Guides.cshtml" />
+    <Content Include="Views\Guides\Guides_List.cshtml" />
+    <Content Include="Views\Settings\Add_Settings.cshtml" />
+    <Content Include="Views\Contact\Contact_List.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Uploads\img\BlogImage\" />
+    <Folder Include="Uploads\img\CategoryImage\" />
+    <Folder Include="Uploads\img\Guides\" />
+    <Folder Include="Uploads\img\LocationImage\" />
+    <Folder Include="Uploads\img\PackageImage\" />
+    <Folder Include="Uploads\img\PackagePdf\" />
+    <Folder Include="Uploads\img\Testimonial\" />
+    <Folder Include="Uploads\img\UserImage\" />
+    <Folder Include="Views\Guide_Web\" />
+    <Folder Include="Views\MasterLayout\" />
+    <Folder Include="Views\TestimonialWeb\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51483</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51483/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
